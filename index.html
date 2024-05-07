@@ -1,0 +1,26 @@
+<iframe
+    id="iframe_appointments_13752"
+    src="https://momence.com/appointments/13752"
+    style="width:100%; border:0px;"
+    allowfullscreen="true"
+    webkitallowfullscreen="true"
+    mozallowfullscreen="true"
+    scrolling="no"
+></iframe>
+    
+<script type="text/javascript">
+    window.addEventListener("message",
+        function (e) {
+            const height = +e.data?.height;
+            const type = e.data?.type;
+            const iframe = document.querySelector("#iframe_appointments_13752");
+
+            if (!type || !type.match("iframe_appointments_13752_resize") || isNaN(height) || !iframe) {
+                return;
+            }
+
+            iframe.height = height + "px";            
+        },
+        false
+     );
+ </script>
